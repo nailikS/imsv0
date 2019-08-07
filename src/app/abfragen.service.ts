@@ -13,11 +13,13 @@ export class AbfragenService {
   
 
   constructor(private http: HttpClient) { }
+  
   getMockVersion(): Observable<IVersion[]>{
     return this.http.get<IVersion[]>(this.mockURL);
   }
   getVersion(): Observable<IVersion[]>{
     return this.http.get<IVersion[]>(this.versionURL).pipe(
+
      // retry(3),
       catchError(this.handleError<IVersion[]>('getVersion()')))}
 
