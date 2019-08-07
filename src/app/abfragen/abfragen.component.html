@@ -1,0 +1,10 @@
+<button (click)="showMockVersion()">Abfragen</button>
+<div><span>MockVersion: </span>
+    <ul *ngFor="let employee of employees">
+      <li>{{mockVer.version}}</li>
+    </ul>
+</div>
+
+<button (click)="showVersion()">Abfragen</button>
+<div><span>Version: </span>{{ver.Version}}</div>
+
